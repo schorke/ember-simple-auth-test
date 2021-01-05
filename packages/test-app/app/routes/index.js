@@ -5,11 +5,7 @@ import { inject as service } from '@ember/service';
 export default Route.extend({
   session: service(),
 
-  beforeModel(transition) {
-    this.get('session').requireAuthentication(transition, 'login');
+  beforeModel() {
+    this.get('session').prohibitAuthentication('protected');
   },
-
-  model() {
-    return this.get('store').find('post', 3);
-  }
 });

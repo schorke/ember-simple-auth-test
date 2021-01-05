@@ -59,6 +59,10 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+    ENV['ember-simple-auth'] = {
+      routeAfterAuthentication: 'protected',
+    };
+
     // Testem prefers this...
     ENV.locationType = 'none';
 

@@ -15,6 +15,7 @@ export default Component.extend({
           this.get('session').set('store.cookieExpirationTime', 60 * 60 * 24 * 14);
         }
       } catch (response) {
+        console.log(response);
         let responseBody = await response.clone().json();
         this.set('errorMessage', responseBody);
       }

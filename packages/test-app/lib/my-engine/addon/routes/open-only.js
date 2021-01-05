@@ -6,6 +6,6 @@ export default Route.extend({
   session: service(),
 
   beforeModel(transition) {
-    this.get('session').prohibitAuthentication(() => this.transitionToExternal('index'));
+    this.get('session').prohibitAuthentication(() => this.transitionToExternal('aze'));
   }
 });

@@ -6,6 +6,6 @@ export default Route.extend({
   session: service(),
 
   beforeModel() {
-    this.get('session').prohibitAuthentication('index');
+    this.get('session').prohibitAuthentication('protected');
   },
 });

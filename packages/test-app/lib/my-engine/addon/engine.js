@@ -11,7 +11,7 @@ const Eng = Engine.extend({
   dependencies: Object.freeze({
     externalRoutes: [
       'login',
-      'index'
+      'qsdqs'
     ],
     services: [
       'session'
